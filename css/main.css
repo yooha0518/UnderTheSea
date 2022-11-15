@@ -1,0 +1,118 @@
+body{
+    background-image: linear-gradient(#c7e3ff,#9fc6ed,#51769a, #224455,#12242d);
+    background-image:url("../img/ocean.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+#wrap{
+    width: 75%;
+    margin: auto;
+}
+#beach{
+    width: 100%;
+    height: 500px; /*-------------------------------------------------*/
+    background-color:rgba(199, 227, 255, 0.6);
+    border-radius: 40px;
+    margin-top: 30px;
+}
+#shallowSea{
+    width: 100%; 
+    height: auto;
+    background-color: rgba(199, 227, 255, 0.6);
+    border-radius: 40px;
+    margin-top: 30px;
+
+}
+#middleSea{
+    width: 100%;
+    background-color: rgba(199, 227, 255, 0.6);
+    border-radius: 40px;
+    margin-top: 30px;
+}
+#deepSea{
+    width: 100%;
+    height: 700px;
+    background-color: rgba(199, 227, 255, 0.6);
+    border-radius: 40px;
+    margin-top: 30px;
+}
+#ultradeepSea{
+    width: 100%;
+    height: 700px; /*-------------------------------------------------*/
+    background-color: rgba(199, 227, 255, 0.6);
+    border-radius: 40px;
+    margin-top: 30px;
+}
+
+
+/* ----- Flex Six Box Class -----*/
+.six_box_wrap{
+    width: 95%;
+    margin: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    
+}
+.flex_six_box{
+    display: flex;
+    flex-wrap: wrap;
+}
+.flex_six_box div{
+    max-width: 15%;
+    min-width: 200px;
+    height: 200px;
+    background-color: rgb(255, 255, 255);
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+    border-radius: 15px;
+}
+/* ----- //Flex Six Box Class -----*/
+
+/* ----- Flex three Box Class -----*/
+.three_box_wrap{
+    width: 95%;
+    margin: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    
+}
+.flex_three_box{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.flex_three_box div{
+    height: 600px;
+    min-width: 350px;
+    background-color: rgb(255, 255, 255);
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+}
+/* ----- //Flex Six Box Class -----*/
+
+/* ----- swimming_animation -----*/
+.swimming_animation{
+    position:relative;
+    width: 95%;
+    height: 100%;
+    margin: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.swimming_animation .fish{
+    position:absolute;
+    height: 70px;
+    width: 10%;
+    background-image: url(../img/nimo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* ----- //swimming_animation -----*/
