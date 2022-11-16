@@ -4,59 +4,101 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- style sheet -->
     <link href="css/main.css" rel="stylesheet">
     <link href="css/reset.css" rel="stylesheet">
     <title>Under The Sea</title>
 
+    <!-- 웹 폰트 -->
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/f4a340c9f0.js" crossorigin="anonymous"></script>
+    
+
 </head>
 <body>
-    <div id="wrap">
-        <div id="beach">
-            <div id="palmtree1"></div>  
-            <div id="palmtree2"></div>  
-            <div id="clude1"></div>  
-            <div id="clude2"></div>  
-        </div>
-        <div id="shallowSea">
-            <div class="six_box_wrap">
-                <div class="flex_six_box">
-                    <div>1</div>
-                    <div>2</div>
-                    <div>3</div>
-                    <div>4</div>
-                    <div>5</div>
-                    <div>6</div>
+    <div id="body">
+        <div id="wrap">
+            <div id="beach">
+                <div id="palmtree1"></div>  
+                <div id="palmtree2"></div>  
+                <div id="clude1"></div>  
+                <div id="clude2"></div>  
+                <div id="clude3"></div>  
+                <div id="clude4"></div>  
+                <div id="clude5"></div>  
+                <button>Under The Sea</button>
+            </div>
+            <div id="shallowSea">
+                <div class="six_box_wrap">
+                    <div class="flex_six_box"> <!-- 이미지 슬라이더 -->
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                        <div>5</div>
+                        <div>6</div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div id="middleSea">
-            <div class="three_box_wrap">
-                <div class="flex_three_box">
-                    <div id="first_tropical_card">first_tropical_card</div>
-                    <div id="second_tropical_card">second_tropical_card</div>
-                    <div id="tirth_tropical_card">tirth_tropical_card</div>
+            <div id="middleSea">
+                <div class="congratulation">congratulation!</div>
+                <div class="three_box_wrap"> 
+                    <div class="flex_three_box"> <!-- 카드 뒤집기 -->
+                        <div class="card">
+                            <div id="first_tropical_card" class="card_front first_card">
+                                <p><i class="fa-solid fa-fish-fins"></i></p> 
+                                <p class="tropical_card_nametag">Click Me!</p>
+                            </div>
+                            <div id="first_tropical_card" class="card_back"></div>
+                        </div>
+                        <div class="card">
+                            <div id="second_tropical_card" class="card_front second_card">
+                                <p><i class="fa-solid fa-fish-fins"></i></p>
+                                <p class="tropical_card_nametag">Click Me!</p> 
+                            </div>
+                            <div id="second_tropical_card" class="card_back"></div>
+                        </div>
+                        <div class="card">
+                            <div id="third_tropical_card" class="card_front third_card">
+                                <p><i class="fa-solid fa-fish-fins"></i></p> 
+                                <p class="tropical_card_nametag">Click Me!</p>
+                            </div>
+                            <div id="third_tropical_card" class="card_back"></div>
+                        </div>
+                    </div>
+                    <div class="two_btn_wrap">
+                        <button id="card_control_reset_btn" class="card_control_btn">카드 리셋하기</button>
+                        <button id="card_control_fixing_btn" class="card_control_btn">카드 조작하기</button>
+                    </div>
+                    
                 </div>
             </div>
-        </div>
-        <div id="deepSea">
-            <div class="swimming_animation">
-                <div id="first_fish" class="fish nimo"></div>
-                <div id="second_fish" class="fish bluetang"></div>
-                <div id="third_fish" class="fish purplefish"></div>
-                <div id="fourth_fish" class="fish nimo"></div>
-                <div id="fifth_fish" class="fish bluetang"></div>
-                <div id="sixth_fish" class="fish purplefish"></div>
-                <div id="seventh_fish" class="fish nimo "></div>
-                <div id="eighth_fish" class="fish nimo"></div>
-                <div id="ninth_fish" class="fish purplefish"></div>
-                <div id="tenth_fish" class="fish nimo"></div>
+            <div id="deepSea">
+                <div class="swimming_animation">
+                    <div id="first_fish" class="fish nimo"></div>
+                    <div id="second_fish" class="fish bluetang"></div>
+                    <div id="third_fish" class="fish purplefish"></div>
+                    <div id="fourth_fish" class="fish nimo"></div>
+                    <div id="fifth_fish" class="fish bluetang"></div>
+                    <div id="sixth_fish" class="fish purplefish"></div>
+                    <div id="seventh_fish" class="fish nimo "></div>
+                    <div id="eighth_fish" class="fish nimo"></div>
+                    <div id="ninth_fish" class="fish purplefish"></div>
+                    <div id="tenth_fish" class="fish nimo"></div>
+                </div>
             </div>
+            <div id="ultradeepSea">ultradeepSea</div>
         </div>
-        <div id="ultradeepSea">ultradeepSea</div>
     </div>
+        
 
 
-
+        
 
 
 
@@ -67,7 +109,7 @@
     integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
     crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-        <script src="main.js"></script>
+    <script src="main.js"></script>
     
     
 </body>

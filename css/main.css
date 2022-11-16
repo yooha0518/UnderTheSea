@@ -1,9 +1,13 @@
+/*  ----- 전체 구조 ----- */
 body{
     background-image: linear-gradient(#c7e3ff,#9fc6ed,#51769a, #224455,#12242d);
     background-image:url("../img/ocean.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     z-index: -1;
+}
+#body{
+    overflow: hidden;
 }
 #wrap{
     position:relative;
@@ -12,7 +16,7 @@ body{
 }
 #beach{
     width: 100%;
-    height: 500px; /*-------------------------------------------------*/
+    height: 500px; /*--------내용컨텐츠 삽입후 삭제------------*/
     background-color:rgba(199, 227, 255, 0.6);
     border-radius: 40px;
     margin-top: 300px;
@@ -41,12 +45,15 @@ body{
 }
 #ultradeepSea{
     width: 100%;
-    height: 700px; /*-------------------------------------------------*/
+    height: 700px; /*--------내용컨텐츠 삽입후 삭제------------*/
     background-color: rgba(199, 227, 255, 0.6);
     border-radius: 40px;
     margin-top: 30px;
 }
+/*  ----- //전체 구조 ----- */
 
+
+/* ------백그라운드 컨텐츠 ----- */
 #palmtree1{
     left: -400px;
     top: -800px;
@@ -73,14 +80,18 @@ body{
 }
 #clude1{
     right: -250px;
-    top:-200px;
+    top:-300px;
     width: 500px;
     height: 400px;
     position: absolute;
     background-image: url("../img/clude1.png");
     background-repeat: no-repeat;
     background-size: cover;
-    z-index: -1;
+    z-index: -2;
+    animation-name: clode_ani1;
+    animation-duration:80s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 #clude2{
     top:-200px;
@@ -93,28 +104,166 @@ body{
     background-size: contain;
     z-index: -2;
 }
+#clude3{
+    right: -250px;
+    top:-200px;
+    width: 500px;
+    height: 400px;
+    position: absolute;
+    background-image: url("../img/clude1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+#clude4{
+    right: -150px;
+    top:150px;
+    width: 500px;
+    height: 400px;
+    position: absolute;
+    background-image: url("../img/clude1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    animation-name: clode_ani2;
+    animation-duration:60s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+#clude5{
+    right: -150px;
+    top:-400px;
+    width: 500px;
+    height: 400px;
+    position: absolute;
+    background-image: url("../img/clude1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    animation-name: clode_ani3;
+    animation-duration:50s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+/* ------ //백그라운드 컨텐츠 ----- */
 
-#first_tropical_card{
-    font-size: 0;
-    background-image: url("../img/tropicalpink.jpg");
+
+/* ----- 헤더 -----  */
+#beach{
+    position: relative;
+}
+#beach button{
+    position:absolute;
+    left: 300px;
+    top: -130px;
+    font-size: 180px;
+    font-family: 'Courgette', cursive;
+    background-color:rgba(255, 255, 255, 0);
+    border:none;
+    font-weight: 800;
+    text-shadow: 5px 5px#ff651e;
+}
+@keyframes clode_ani1{
+    from{left:-50%;}
+    to{left:130%;}
+}
+@keyframes clode_ani2{
+    from{left:30%;}
+    to{left:130%;}
+}
+@keyframes clode_ani3{
+    from{left:70%;}
+    to{left:130%;}
+}
+/* ----- //헤더 -----  */
+
+/* ----- 트로피칼 카드 3장  ----- */
+.card{
+    width: 350px;
+    height: 100%;
+    position: relative;
+    transition: 2s;
+    z-index: 2;
+    backface-visibility: hidden;
+}
+.card_front{
+    left: -8px;
+    top: -8px;
+    position:absolute;
+    background-image: radial-gradient(rgb(255, 255, 255),rgb(104, 255, 227));
+}
+.card_back{
+    left: -8px;
+    top: -8px;
+    position:absolute;
+    transform: rotateY(180deg);
+    z-index: -1;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
-#second_tropical_card{
-    font-size: 0;
-    background-image: url("../img/tropicalbird.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+
+#middleSea .fa-fish-fins{ /*어썸폰트*/
+    font-size: 90px;
+    display: block;
+    text-align: center;
+    line-height: 560px;
+    color:#51769a;
 }
-#tirth_tropical_card{
-    font-size: 0;
-    background-image: url("../img/tropicalorg.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+.tropical_card_nametag{
+    position:absolute;
+    top: 370px;
+    left: 80px;
+    font-size: 40px;
+    color:#51769a;
+    font-family: 'Rubik Bubbles', cursive,Arial,sans-serif;
 }
+.two_btn_wrap{
+    width: 60%;
+    display: flex;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.card_control_btn{
+    width: 300px;
+    height: 70px;
+    margin: auto;
+    border:none;
+    border-radius: 15px;
+    font-size: 30px;
+    font-family: 'Jua', sans-serif;
+    color:#51769a;
+    background-color: white;
+    box-shadow:0px 10px #558aa5;
+    
+}
+.card_control_btn:hover{
+    background-color: #d5eaff;
+    box-shadow:0px 7px #558aa5;
+    transform: translateY(2px);
+}
+.card_control_btn:active{
+    box-shadow:none;
+    transition: none;
+    transform: translateY(5px);
+}
+.congratulation{
+    position: absolute;
+    top: 1000px;
+    left: 140px;
+    color: rgb(234, 207, 55);
+    font-size: 0;
+    z-index: 9;
+    font-family: 'Fredoka One',cursive,Georgia, 'Times New Roman', Times, serif;
+    text-shadow:6px 6px  #fd8f21 ;
+
+}
+
+
+
+/* ----- //트로피칼 카드 3장  ----- */
+
 
 /* ----- Flex Six Box Class -----*/
 .six_box_wrap{
@@ -122,7 +271,6 @@ body{
     margin: auto;
     padding-top: 30px;
     padding-bottom: 30px;
-    
 }
 .flex_six_box{
     display: flex;
@@ -136,7 +284,6 @@ body{
     margin: auto;
     margin-top: 20px;
     margin-bottom: 20px;
-    
     border-radius: 15px;
 }
 /* ----- //Flex Six Box Class -----*/
@@ -157,9 +304,7 @@ body{
 .flex_three_box div{
     height: 600px;
     min-width: 350px;
-    background-color: rgb(255, 255, 255);
     margin: auto;
-    margin-top: 20px;
     margin-bottom: 20px;
     border-radius: 15px;
     border: 8px solid rgb(255, 255, 255);
@@ -194,6 +339,4 @@ body{
 .purplefish{
     background-image: url(../img/purplefish.png);
 }
-
-
 /* ----- //swimming_animation -----*/
