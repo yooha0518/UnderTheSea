@@ -145,6 +145,18 @@ body{
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
+@keyframes clode_ani1{
+    from{left:-50%;}
+    to{left:130%;}
+}
+@keyframes clode_ani2{
+    from{left:30%;}
+    to{left:130%;}
+}
+@keyframes clode_ani3{
+    from{left:70%;}
+    to{left:130%;}
+}
 /* ------ //백그라운드 컨텐츠 ----- */
 
 
@@ -163,18 +175,11 @@ body{
     font-weight: 800;
     text-shadow: 5px 5px#ff651e;
 }
-@keyframes clode_ani1{
-    from{left:-50%;}
-    to{left:130%;}
+#beach button:hover {
+   color:#aaff00;
 }
-@keyframes clode_ani2{
-    from{left:30%;}
-    to{left:130%;}
-}
-@keyframes clode_ani3{
-    from{left:70%;}
-    to{left:130%;}
-}
+
+
 /* ----- //헤더 -----  */
 
 /* ----- 트로피칼 카드 3장  ----- */

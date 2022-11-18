@@ -108,15 +108,13 @@ jQuery(document).ready(function($){
                 $('.congratulation').animate({
                     fontSize:'150px',
                     opacity:100
-                    },
-                    1500,
+                    },1500,
                     'easeInOutElastic',
                     setTimeout(function(){
                         $('.congratulation').animate({
                             fontSize:'0px',
                             opacity:0
-                            },
-                            1500,
+                            },1500,
                             'easeInOutElastic',
                             function(){
                                 $("#card_control_reset_btn").click();
@@ -124,19 +122,6 @@ jQuery(document).ready(function($){
                         );
                     },4000)
                 );
-
-                
-                
-
-
-/* 
-                $(".congratulation").fadeIn(2000,'easeInOutElastic');
-                $(".congratulation").delay(2000);
-                $(".congratulation").fadeOut(2000,"easeInOutElastic");
-                setTimeout(function(){
-                    $("#card_control_reset_btn").click();
-                },5000) */
-                
             }
         }
         else{
