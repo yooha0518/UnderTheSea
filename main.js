@@ -98,24 +98,21 @@ jQuery(document).ready(function($){
             alert("error");
         }
         
-        
-        
-        
         if((first_card_number == second_card_number)&&(second_card_number == third_card_number) ){
             if(first_card_cheak==1 && second_card_cheak == 1 && third_card_cheak == 1)
             {
 
-                $('.congratulation').animate({
-                    fontSize:'150px',
+                $(".congratulation").animate({
+                    fontSize:"150px",
                     opacity:100
                     },1500,
-                    'easeInOutElastic',
+                    "easeInOutElastic",
                     setTimeout(function(){
-                        $('.congratulation').animate({
-                            fontSize:'0px',
+                        $(".congratulation").animate({
+                            fontSize:"0px",
                             opacity:0
                             },1500,
-                            'easeInOutElastic',
+                            "easeInOutElastic",
                             function(){
                                 $("#card_control_reset_btn").click();
                             }
@@ -133,13 +130,6 @@ jQuery(document).ready(function($){
                 
             }
         }
-        
-
-
-        
-
-          
-    
     });
 
     $("#card_control_reset_btn").click(function(){ //카드 리셋하기
@@ -155,9 +145,8 @@ jQuery(document).ready(function($){
         fixing_btn_cheak = 1;
     });
 
-
-
    // ----- //카드 뒤집기 -----
+
 
 
     

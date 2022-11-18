@@ -3,3 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+.background_hide_alt{
+    font-size: 0;
+    color: rgba(0,0,0,0);
+}

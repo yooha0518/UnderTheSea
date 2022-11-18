@@ -27,8 +27,15 @@ body{
     background-color: rgba(199, 227, 255, 0.6);
     border-radius: 40px;
     margin-top: 30px;
-
+    /* animation-name: shallowsea_led_effect;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite; */
 }
+/* @keyframes shallowsea_led_effect{
+    from{outline: dotted 10px #aaff00;}
+    to{outline: dotted 10px #00fff2;}
+    
+} */ /* 렉으로 인해 사용 불가 */
 #middleSea{
     width: 100%;
     background-color: rgba(199, 227, 255, 0.6);
@@ -178,9 +185,49 @@ body{
 #beach button:hover {
    color:#aaff00;
 }
-
-
 /* ----- //헤더 -----  */
+
+/*  shallowSea */
+#shallowSea #pineapple{
+    background-image: url("../img/pineapple.jpg");
+    background-position:0 -60px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#shallowSea #plant{
+    background-image: url("../img/plant.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#shallowSea #sandcastle{
+    background-image: url("../img/sandcastle.jpg");
+    background-position: -130px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#shallowSea #shell{
+    background-image: url("../img/shell.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#shallowSea #starfish{
+    background-image:url("../img/starfish.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#shallowSea #plumeria{
+    background-image: url("../img/plumeria.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*  //shallowSea */
+
+
+
 
 /* ----- 트로피칼 카드 3장  ----- */
 .card{
@@ -264,9 +311,6 @@ body{
     text-shadow:6px 6px  #fd8f21 ;
 
 }
-
-
-
 /* ----- //트로피칼 카드 3장  ----- */
 
 
