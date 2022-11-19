@@ -98,11 +98,10 @@ jQuery(document).ready(function($){
             alert("error");
         }
         
-        if((first_card_number == second_card_number)&&(second_card_number == third_card_number) ){
-            if(first_card_cheak==1 && second_card_cheak == 1 && third_card_cheak == 1)
+        if((first_card_number == second_card_number)&&(second_card_number == third_card_number) ){ //세장의 카드가 모두 같고
+            if(first_card_cheak==1 && second_card_cheak == 1 && third_card_cheak == 1) //세장의 카드가 모두 뒷면이면
             {
-
-                $(".congratulation").animate({
+                $(".congratulation").animate({ //애니메이션을 실행한다.
                     fontSize:"150px",
                     opacity:100
                     },1500,
@@ -121,13 +120,12 @@ jQuery(document).ready(function($){
                 );
             }
         }
-        else{
-            if(first_card_cheak==1 && second_card_cheak == 1 && tirth_card_cheak == 1)
+        else{ //세장의 카드가 모두 같은 경우가 아닌 경우 
+            if(first_card_cheak==1 && second_card_cheak == 1 && third_card_cheak == 1) //카드가 모두 뒷면일때 
             {
                 setTimeout(function(){
                     $("#card_control_reset_btn").click();
                 },2000)
-                
             }
         }
     });
