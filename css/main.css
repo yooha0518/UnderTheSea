@@ -13,20 +13,14 @@ body{
     width: 75%;
     margin: auto;
 }
-#beach{
-    width: 100%;
-    height: 500px; /*--------내용컨텐츠 삽입후 삭제------------*/
-    background-color:rgba(199, 227, 255, 0.6);
-    border-radius: 40px;
-    margin-top: 300px;
-}
-#shallowSea{
+
+#cocktail{
     position: relative;
     width: 100%; 
     height: auto;
     background-color: rgba(199, 227, 255, 0.6);
     border-radius: 40px;
-    margin-top: 110px;
+    margin-top: 1200px;
     animation-name: shallowsea_led_effect;
     animation-duration: 1s;
     animation-iteration-count: infinite; 
@@ -37,34 +31,77 @@ body{
     100%{outline: dotted 10px #aaff00;}
     
 }
-#middleSea{
+#tropical_cardgame{
+    position:relative;
     width: 100%;
     background-color: rgba(199, 227, 255, 0.6);
     border-radius: 40px;
-    margin-top: 30px;
+    margin-top: 200px;
+    padding-top: 80px;
+    padding-bottom: 80px;
 }
-#deepSea{
+#swimming_fish{
     width: 100%;
     height: 700px;
     border-radius: 40px;
-    margin-top: 30px;
+    margin: 100px 0 100px 0;
     border: 15px solid rgb(255, 255, 255);
     overflow: hidden;
 }
-#ultradeepSea{
-    width: 100%;
-    height: 700px; /*--------내용컨텐츠 삽입후 삭제------------*/
-    background-color: rgba(199, 227, 255, 0.6);
-    border-radius: 40px;
-    margin-top: 30px;
-}
 /*  ----- //전체 구조 ----- */
 
+/* -----메뉴----- */
+.menu{
+    position: relative;
+    font-size: 40px;
+    text-align: right;
+    padding-right: 40px;
+    padding-top: 10px;
+}
+.menu a{
+    margin-right: 10px;
+}
+[class*="tooltip_text"]{
+    position: absolute;
+    top: 65px;
+    display:inline-block;
+    background-color: black;
+    color:white;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid white;
+    padding: 5px;
+}
+.git_tooltip_text{
+    right: 120px;
+    visibility: hidden;
+}
+.blog_tooltip_text{
+    right: 70px;
+    visibility: hidden;
+
+}
+.menu_tooltip_text{
+    right: 30px;
+    visibility: hidden;
+
+}
+.fa-github:hover .git_tooltip_text{
+    visibility: visible;
+}
+.fa-blog:hover .blog_tooltip_text{
+    visibility: visible;
+}
+.fa-bars:hover .menu_tooltip_text{
+    visibility: visible;
+}
+/* //-----메뉴----- */
 
 /* ------백그라운드 컨텐츠 ----- */
 #palmtree1{
     left: -400px;
-    top: -800px;
+    top: -400px;
     width: 900px;
     height: 1500px;
     position: absolute;
@@ -75,20 +112,20 @@ body{
     z-index: -1;
 }
 #palmtree2{
-    right: -400px;
-    top: 300px;
-    width: 800px;
-    height: 1300px;
+    right: -440px;
+    top: 800px;
+    width: 700px;
+    height: 1000px;
     position: absolute;
     background-image: url("../img/palmtree2.png");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     transform: rotate(-20deg);
     z-index: -1;
 }
 #clude1{
     right: -250px;
-    top:-300px;
+    top:10px;
     width: 500px;
     height: 400px;
     position: absolute;
@@ -102,10 +139,10 @@ body{
     animation-timing-function: linear;
 }
 #clude2{
-    top:-200px;
+    top:200px;
     left: -500px;
     width: 1200px;
-    height: 1000px;
+    height: 700px;
     position: absolute;
     background-image: url("../img/clude2.png");
     background-repeat: no-repeat;
@@ -113,20 +150,20 @@ body{
     z-index: -2;
 }
 #clude3{
-    right: -250px;
-    top:-200px;
-    width: 500px;
-    height: 400px;
+    right: -400px;
+    top:600px;
+    width: 800px;
+    height: 500px;
     position: absolute;
     background-image: url("../img/clude1.png");
     background-repeat: no-repeat;
     background-size: cover;
-    z-index: -1;
+    z-index: -2;
 }
 #clude4{
     right: -150px;
     top:150px;
-    width: 500px;
+    width: 800px;
     height: 400px;
     position: absolute;
     background-image: url("../img/clude1.png");
@@ -139,15 +176,14 @@ body{
     animation-timing-function: linear;
 }
 #clude5{
-    right: -150px;
-    top:-400px;
+    top:800px;
     width: 500px;
     height: 400px;
     position: absolute;
     background-image: url("../img/clude1.png");
     background-repeat: no-repeat;
     background-size: cover;
-    z-index: -1;
+    z-index: -2;
     animation-name: clode_ani3;
     animation-duration:50s;
     animation-iteration-count: infinite;
@@ -169,113 +205,109 @@ body{
 
 
 /* ----- 헤더 -----  */
-#beach{
-    position: relative;
-}
-#beach button{
-    position:absolute;
-    left: 300px;
-    top: -130px;
-    font-size: 180px;
-    font-family: 'Courgette', cursive;
-    background-color:rgba(255, 255, 255, 0);
-    border:none;
-    font-weight: 800;
-    text-shadow: 5px 5px#ff651e;
-}
-#beach button:hover {
-   color:#aaff00;
+#title{
+    position: absolute;
+    top: 300px;
+    left: 450px; 
+    width: 70%;
+    height: 300px;
+    background-image: url("../img/title.png");
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 1;
+}  
+#title:hover {
+    background-image: url("../img/titlehover.png");
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 /* ----- //헤더 -----  */
 
-/*  shallowSea */
-#cocktailtext{
+/* cocktail (style) */
+#cocktailtitle{
     position: absolute;
     top: -250px;
     left: 0px;
     width: 400px;
     height: 400px;
-    background-image: url("../img/cocktailtext4.png");
+    background-image: url("../img/cocktailtext.png");
     background-position:center;
     background-repeat: no-repeat;
     background-size: contain;
 }
-#shallowSea #cocktail1{
+#cocktail1{
     background-image: url("../img/cocktail1.png");
     background-position:center;
     background-repeat: no-repeat;
     background-size: contain;
 }
-#shallowSea #cocktail2{
+#cocktail2{
     background-image: url("../img/cocktail2.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
-#shallowSea #cocktail3{
+#cocktail3{
     background-image: url("../img/cocktail3.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
-#shallowSea #cocktail4{
+#cocktail4{
     background-image: url("../img/cocktail4.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
-#shallowSea #cocktail5{
+#cocktail5{
     background-image:url("../img/cocktail5.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
-#shallowSea #cocktail6{
+#cocktail6{
     background-image: url("../img/cocktail6.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
+/*  //cocktail (style)*/
 
-/*  //shallowSea */
-
-/* ----- Flex Six Box Class -----*/
-.six_box_wrap{
-    width: 95%;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    margin: auto;
-}
+/* ----- Flex Six sliding carousel -----*/
 .sliding_carousel{
     overflow: hidden;
 }
-.flex_sixbox{
+.flex_sliding_carousel{
+    width: 95%;
+    margin: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
     display: flex;
     flex-wrap: nowrap;
     animation:sliding_carousel 15s linear infinite;
     overflow:visible;
 }
-.box_of_flex_sixbox{
+.box_of_sliding_carousel{
     max-width: 15%;
     min-width: 200px;
     height: 200px;
     margin-top: 20px;
     margin-bottom: 20px;
 }
-.box_of_flex_sixbox:hover{
-    background-image: url("../img/cocktailtext.png");
-}
+
 @keyframes sliding_carousel{
     0% {
         transform: translateX(0);
     }
-    100% {transform: translateX(-1200px); /* flex_sixbox div의 width 200px*6=1200px */
+    100% {transform: translateX(-1200px); /* box_of_sliding_carousel의 width 200px*6=1200px */
     }
 }
-/* ----- //Flex Six Box Class -----*/
+/* ----- //Flex Six sliding carousel -----*/
 
 
-/* ----- 트로피칼 카드 3장  ----- */
+/* ----- tropical_cardgame ----- */
 .card{
     width: 350px;
     height: 100%;
@@ -300,18 +332,17 @@ body{
     background-position: center;
     background-size: cover;
 }
-
-#middleSea .fa-fish-fins{ /*어썸폰트*/
+.fa-fish-fins{ /*어썸폰트*/
+    position:absolute;
+    top: 240px;
+    left: 110px;
     font-size: 90px;
-    display: block;
-    text-align: center;
-    line-height: 560px;
     color:#51769a;
 }
-.tropical_card_nametag{
+.tropical_card_text{
     position:absolute;
     top: 370px;
-    left: 80px;
+    left: 75px;
     font-size: 40px;
     color:#51769a;
     font-family: 'Rubik Bubbles', cursive,Arial,sans-serif;
@@ -347,30 +378,25 @@ body{
 }
 .congratulation{
     position: absolute;
-    top: 1000px;
+    top: 200px;
     left: 140px;
     color: rgb(234, 207, 55);
     font-size: 0;
     z-index: 9;
     font-family: 'Fredoka One',cursive,Georgia, 'Times New Roman', Times, serif;
     text-shadow:6px 6px  #fd8f21 ;
-
 }
-/* ----- //트로피칼 카드 3장  ----- */
+/* ----- //tropical_cardgame  ----- */
 
 
 /* ----- Flex three Box Class -----*/
-.three_box_wrap{
+.flex_three_box{
     width: 95%;
     margin: auto;
     padding-top: 30px;
     padding-bottom: 30px;
-    
-}
-.flex_three_box{
     display: flex;
     flex-wrap: wrap;
-    
 }
 .flex_three_box div{
     height: 600px;
@@ -380,7 +406,7 @@ body{
     border-radius: 15px;
     border: 8px solid rgb(255, 255, 255);
 }
-/* ----- //Flex Six Box Class -----*/
+/* ----- //Flex three Box Class -----*/
 
 /* ----- swimming_animation -----*/
 .swimming_animation{
@@ -410,4 +436,85 @@ body{
 .purplefish{
     background-image: url(../img/purplefish.png);
 }
+.swimming_animation p{
+    font-size: 20px;
+    color: rgb(14, 14, 69);
+    font-weight: bold;
+    visibility: hidden;
+}
 /* ----- //swimming_animation -----*/
+
+/* 미디어 쿼리 */
+@media(max-width:1730px){
+    #title{
+    }
+}
+@media(max-width:1530px){
+    #title{
+        left: 300px;
+    }
+}
+@media(max-width:1400px){
+    #title{
+        left: 300px; 
+        width: 80%;
+    }
+    .card_control_btn{
+        width: 100%;
+        margin: 10px;
+    }
+}
+@media(max-width:1240px){
+    #title{
+        top: 400px;
+        left: 20%; 
+        width: 85%;
+    }
+    .card_control_btn{
+    }
+}
+
+@media(max-width:1024px){
+    #title{
+        top: 400px;
+        left: 10%; 
+        width: 85%;
+    }
+    #palmtree1{
+        height: 1300px;
+    }
+    #palmtree2{
+        right: -500px;
+        height: 800px;
+    }
+    .card_control_btn{
+        font-size: 25px;
+    }
+}
+@media(max-width:900px){
+    .card_control_btn{
+        font-size: 25px;
+    }
+}
+@media(max-width:768px){
+    #palmtree2{
+        right: -500px;
+        height: 600px;
+    }
+    .card_control_btn{
+        font-size: 20px;
+    }
+}
+
+@media(max-width:600px){
+    .two_btn_wrap{
+        flex-direction: column;
+    }
+    .card_control_btn{
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+    .swimming_animation p{
+        visibility: visible;
+    }
+}

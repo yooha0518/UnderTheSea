@@ -43,32 +43,29 @@ jQuery(document).ready(function($){
     var fixing_btn_cheak = 0;
     var first_card_number;
     var second_card_number;
-    var tirth_card_number;
+    var third_card_number;
+    var first_card_cheak =0;
+    var second_card_cheak =0;
+    var third_card_cheak= 0;
     // ----- 카드 뒤집기 -----
     $(".card").click(function(){
-        
         $(this).css("transform","rotateY(180deg)");
         
         if($(this).children("#first_tropical_card").hasClass("first_card"))
         {
-            $(this).children("#first_tropical_card").data("card_filp_cheak",1);
-            first_card_cheak = $(this).children("#first_tropical_card").data("card_filp_cheak");
-            //alert("    first card cheak : "+first_card_cheak);
+            first_card_cheak = 1;
         }
         else if($(this).children("#second_tropical_card").hasClass("second_card")){
-            $(this).children("#second_tropical_card").data("card_filp_cheak",1);
-            second_card_cheak = $(this).children("#second_tropical_card").data("card_filp_cheak");
-            //alert("    second card cheak : "+second_card_cheak);
+            second_card_cheak = 1;
         }
         else if($(this).children("#third_tropical_card").hasClass("third_card")){
-            $(this).children("#third_tropical_card").data("card_filp_cheak",1);
-            third_card_cheak = $(this).children("#third_tropical_card").data("card_filp_cheak");
+            third_card_cheak = 1;
         }
         else{
             alert("error");
         }
 
-
+        
         tropicalcard_random_number = Math.floor(Math.random()*3+1);
 
         if(fixing_btn_cheak == 1){ // 조작버튼을 눌렀을때 모두 같은 카드로 나오게 한다.
@@ -80,26 +77,26 @@ jQuery(document).ready(function($){
         });
 
         
-
-        if($(this).children("#first_tropical_card").hasClass("first_card"))
+        if($(this).children("#first_tropical_card").hasClass("first_card")) //첫번째 카드이면
         {
             $(this).children("#first_tropical_card").data("card_number",tropicalcard_random_number);
             first_card_number = $(this).children("#first_tropical_card").data("card_number");
         }
-        else if($(this).children("#second_tropical_card").hasClass("second_card")){
+        else if($(this).children("#second_tropical_card").hasClass("second_card")){ //두번째 카드이면
             $(this).children("#second_tropical_card").data("card_number",tropicalcard_random_number);
             second_card_number = $(this).children("#second_tropical_card").data("card_number");
         }
-        else if($(this).children("#third_tropical_card").hasClass("third_card")){
+        else if($(this).children("#third_tropical_card").hasClass("third_card")){ //세번째 카드이면
             $(this).children("#third_tropical_card").data("card_number",tropicalcard_random_number);
             third_card_number = $(this).children("#third_tropical_card").data("card_number");
         }
         else{
             alert("error");
         }
-        
+    
+
         if((first_card_number == second_card_number)&&(second_card_number == third_card_number) ){ //세장의 카드가 모두 같고
-            if(first_card_cheak==1 && second_card_cheak == 1 && third_card_cheak == 1) //세장의 카드가 모두 뒷면이면
+            if(first_card_cheak == 1 && second_card_cheak == 1 && third_card_cheak == 1) //세장의 카드가 모두 뒷면이면
             {
                 $(".congratulation").animate({ //애니메이션을 실행한다.
                     fontSize:"150px",
@@ -116,7 +113,7 @@ jQuery(document).ready(function($){
                                 $("#card_control_reset_btn").click();
                             }
                         );
-                    },4000)
+                    },3500)
                 );
             }
         }
@@ -137,7 +134,7 @@ jQuery(document).ready(function($){
         fixing_btn_cheak = 0;
         first_card_cheak=0;
         second_card_cheak=0;
-        tirth_card_cheak=0;
+        third_card_cheak=0;
     });
     $("#card_control_fixing_btn").click(function(){ //카드 조작하기
         fixing_btn_cheak = 1;
