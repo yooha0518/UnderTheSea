@@ -65,7 +65,6 @@ jQuery(document).ready(function($){
             alert("error");
         }
 
-        
         tropicalcard_random_number = Math.floor(Math.random()*3+1);
 
         if(fixing_btn_cheak == 1){ // 조작버튼을 눌렀을때 모두 같은 카드로 나오게 한다.
@@ -76,7 +75,6 @@ jQuery(document).ready(function($){
         "background-image":"url(img/tropicalcard" + tropicalcard_random_number + ".jpg)"
         });
 
-        
         if($(this).children("#first_tropical_card").hasClass("first_card")) //첫번째 카드이면
         {
             $(this).children("#first_tropical_card").data("card_number",tropicalcard_random_number);
@@ -93,13 +91,14 @@ jQuery(document).ready(function($){
         else{
             alert("error");
         }
-    
 
         if((first_card_number == second_card_number)&&(second_card_number == third_card_number) ){ //세장의 카드가 모두 같고
             if(first_card_cheak == 1 && second_card_cheak == 1 && third_card_cheak == 1) //세장의 카드가 모두 뒷면이면
             {
+                var tropical_cardgame_width = $("#tropical_cardgame").width();
+
                 $(".congratulation").animate({ //애니메이션을 실행한다.
-                    fontSize:"150px",
+                    fontSize:tropical_cardgame_width/10,
                     opacity:100
                     },1500,
                     "easeInOutElastic",
@@ -131,7 +130,7 @@ jQuery(document).ready(function($){
         $(".card").css({
             "transform":"none"
         });
-        fixing_btn_cheak = 0;
+        fixing_btn_cheak =0;
         first_card_cheak=0;
         second_card_cheak=0;
         third_card_cheak=0;
@@ -139,10 +138,23 @@ jQuery(document).ready(function($){
     $("#card_control_fixing_btn").click(function(){ //카드 조작하기
         fixing_btn_cheak = 1;
     });
+    // ----- //카드 뒤집기 -----
 
-   // ----- //카드 뒤집기 -----
+    // ----- 카드 비율 유지시키기 ----- 
+    var card_width = $(".box_of_flex_three_box").width();
+    var card_height =card_width*1.8;
+    $(".box_of_flex_three_box").css({
+        height:card_height
+    });
+    $(".card_front ").css({
+        paddingTop:card_width*0.7
+    });
+    // ----- //카드 비율 유지시키기 ----- 
+    
 
+    
 
+  
 
     
 
